@@ -1,37 +1,30 @@
-
 {% extends 'base.html' %} {% block content %}
 {% load tailwind_filters %}
-
+<br>
 <form action="POST"></form>
-<div class="gap-5 grid h-screen place-items-center">
-        <form method="POST">
-          <div class="shadow sm:rounded-md sm:overflow-hidden">
-            <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
-              <div class="grid grid-cols-0">
-                <div class="col-span-3 sm:col-span-2">
-                    
-                  <label for="company-website" class="block text-sm font-medium text-gray-700"> {% csrf_token %} {{form|crispy}}</label>
-                </div>
-              </div>
-                <p class="mt-2 text-sm text-gray-500">Write a short blog.</p>
-              </div>
+<div class="gap-5 grid  place-items-center">
+  <form method="POST">
+    <div class="shadow sm:rounded-md sm:overflow-hidden">
+      <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
+        <div class="grid grid-cols-0">
+          <div class="col-span-3 sm:col-span-2">
 
-    
-            <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
-              <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Submit</button>
-            </div>
+            <label for="company-website" class="block text-sm font-medium text-gray-700"> {% csrf_token %}
+              {{form|crispy}}</label>
           </div>
-        </form>
+        </div>
+        <p class="mt-2 text-sm text-gray-500">Write a short blog.</p>
+      </div>
+
+
+      <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+        <button type="submit"
+          class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Submit</button>
       </div>
     </div>
-  </div>
-  
-  <div class="hidden sm:block" aria-hidden="true">
-    <div class="py-5">
-      <div class="border-t border-gray-200"></div>
-    </div>
-  </div>
+  </form>
+</div>
 </form>
-  
+
 
 {% endblock content %}

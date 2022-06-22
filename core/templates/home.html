@@ -1,2 +1,7 @@
-<h1>HOLA!</h1> <a href="{% url 'Blog:home' %}">Aquí</a>
+{% extends 'base.html' %}
 
+{% block content %}
+<a class="text-blue-500" href="{% url 'Blog:home' %}">Aquí</a>
+  
+
+{% endblock content %}
